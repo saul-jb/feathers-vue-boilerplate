@@ -1,6 +1,6 @@
 <template>
-	<div id="app">
-		<router-view></router-view>
+	<div>
+		The Home Page!
 	</div>
 </template>
 
@@ -8,6 +8,6 @@
 
 </script>
 
-<style>
+<style scoped>
 
 </style>

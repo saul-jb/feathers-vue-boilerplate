@@ -1,6 +1,6 @@
 {
-	"name": "vue-boilerplate",
-	"description": "Realtime chat with feathers and vue.",
+	"name": "feathers-vue-boilerplate",
+	"description": "A prestructured boilerplate to get feathers and vue quickly running for a real-time application.",
 	"version": "1.0.0",
 	"author": "saul <saul@avikar.io>",
 	"license": "MIT",
