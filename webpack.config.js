@@ -2,9 +2,9 @@ var path = require("path");
 var webpack = require("webpack");
 
 module.exports = {
-	entry: "./src/main.js",
+	entry: "./client/main.js",
 	output: {
-		path: path.resolve(__dirname, "server", "public"),
+		path: path.resolve(__dirname, "public"),
 		publicPath: "/",
 		filename: "build.js"
 	},
@@ -42,7 +42,8 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			"vue$": "vue/dist/vue.esm.js"
+			"vue$": "vue/dist/vue.esm.js",
+			"@": path.join(__dirname, "client")
 		},
 		extensions: ["*", ".js", ".vue", ".json"]
 	},
