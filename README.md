@@ -1,8 +1,8 @@
 # feathers-vue-boilerplate
-A prestructured boilerplate to get feathers and vue quickly running for a real-time application.
+A prestructured boilerplate to get feathers and vue quickly running for a real-time application.<br>
 
 ## Oficial Docs
-[Vuejs](https://vuejs.org/v2/guide/)
+[Vuejs](https://vuejs.org/v2/guide/)<br>
 [Feathersjs](https://docs.feathersjs.com/)
 
 ## Usage
@@ -20,7 +20,7 @@ If you application requires authentication run:
 ``` bash
 feathers generate authentication
 ```
-All the client side methods should be put in client/libs/auth.js
+All the client side methods should be put in client/libs/auth.js<br>
 Don't need authentication? The client/libs/auth.js can be safely deleted.
 ### Rest Services
 For every service (users, messages, etc.) you need to run:
