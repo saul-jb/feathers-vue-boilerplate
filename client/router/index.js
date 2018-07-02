@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "@/pages/PageHome";
+import Home from "@/pages/page-home";
 
 Vue.use(Router);
 
@@ -19,7 +19,7 @@ const router = new Router({
 	]
 });
 
-router.afterEach((to, from, next) => {
+router.beforeEach((to, from, next) => {
 	document.title = to.name;
 
 	next();
