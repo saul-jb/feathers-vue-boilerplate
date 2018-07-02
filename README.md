@@ -16,12 +16,12 @@ Install feathers cli:
 sudo npm i -g @feathersjs/cli
 ```
 ### Authentication
-If you application requires authentication run:
+If your application requires authentication run:
 ``` bash
 feathers generate authentication
 ```
 All the client side methods should be put in client/libs/auth.js<br>
-Don't need authentication? The client/libs/auth.js can be safely deleted.
+Don't need authentication? The client/libs/auth.js file can be safely deleted.
 ### Rest Services
 For every service (users, messages, etc.) you need to run:
 ``` bash
