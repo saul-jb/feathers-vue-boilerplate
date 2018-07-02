@@ -1,5 +1,5 @@
-import defaultConf from "../config/default.json";
-import productionConf from "../config/production.json";
+import defaultConf from "@/../config/default.json";
+import productionConf from "@/../config/production.json";
 import merge from "lodash.merge";
 
 let conf = merge({}, defaultConf);
