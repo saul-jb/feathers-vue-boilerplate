@@ -29,7 +29,7 @@ feathers generate service
 ```
 ### Listening To Server Events
 ``` javascript
-import client from "../libs/client";
+import client from "@/libs/client";
 
 export default {
 	created(){
@@ -39,3 +39,16 @@ export default {
 	}
 };
 ```
+### Running
+The client side can be run via:
+``` bash
+npm run dev
+```
+The client can be built into files ready for the server with this command:
+``` bash
+npm run build
+```
+The server that runs the REST api and delivers the build files can be run via:
+``` bash
+npm run Server
+``` 
