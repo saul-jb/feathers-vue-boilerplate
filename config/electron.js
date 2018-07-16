@@ -15,7 +15,7 @@ const createWindow = async () => {
 	});
 
 	// and load the index.html of the app.
-	mainWindow.loadURL(`file://${__dirname}/public/index.html`);
+	mainWindow.loadURL(`file://${__dirname}/../public/index.html`);
 
 	// Open the DevTools.
 	if (isDevMode) {

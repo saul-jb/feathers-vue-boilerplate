@@ -1,6 +1,6 @@
 {
   "presets": [
-    ["env", { "modules": false }],
-    "stage-3"
-  ]
+    ["env", { "cacheDirectory": true }]
+  ],
+  "plugins": ["transform-object-rest-spread"]
 }

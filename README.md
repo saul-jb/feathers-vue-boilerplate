@@ -84,7 +84,7 @@ Where OS can be:
 * mac
 * android
 * ios<br>
-And :ia32 can be appended for ia32 builds (Desktop only).
+And `:ia32` can be appended for ia32 builds (Desktop only).
 #### Server
 The client can be built into files ready for the server with this command:
 ``` bash
