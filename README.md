@@ -76,7 +76,7 @@ npm run build
 ```
 To build the app for production run:
 ``` bash
-electron:build:OS
+build:OS
 ```
 Where OS can be:
 * linux (defualt)

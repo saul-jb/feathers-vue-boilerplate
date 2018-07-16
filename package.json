@@ -9,18 +9,22 @@
 	"scripts": {
 		"dev": "cross-env NODE_ENV=development webpack-dev-server  --config config/webpack.config.js --content-base public --open --hot",
 		"build": "cross-env NODE_ENV=production webpack  --config config/webpack.config.js --progress --hide-modules",
-		"electron": "cross-env NODE_ENV=development electron electron.js",
+
+		"desktop": "cross-env NODE_ENV=development electron electron.js",
 		"build:linux": "cross-env NODE_ENV=production electron-builder build -l --x64",
 		"build:linux:ia32": "cross-env NODE_ENV=production electron-builder build -l --ia32",
 		"build:mac": "cross-env NODE_ENV=production electron-builder build -m --x64",
 		"build:mac:ia32": "cross-env NODE_ENV=production electron-builder build -m --ia32",
 		"build:windows": "cross-env NODE_ENV=production electron-builder build -w --x64",
 		"build:windows:ia32": "cross-env NODE_ENV=production electron-builder build -w --ia32",
+
 		"android": "npm run debug -- --env.android",
 		"ios": "npm run debug -- --env.ios",
 		"build:android": "npm run build -- --env.android",
 		"build:ios": "npm run build -- --env.ios",
+
 		"server": "node server/",
+
 		"clean": "rimraf dist"
 	},
 	"build": {
@@ -38,15 +42,12 @@
 		"@feathersjs/socketio": "^3.2.0",
 		"compression": "^1.7.2",
 		"cors": "^2.8.4",
-		"electron-devtools-installer": "^2.2.4",
 		"helmet": "^3.12.0",
-		"nativescript-theme-core": "^1.0.4",
-		"nativescript-vue": "^1.3.1",
 		"serve-favicon": "^2.5.0",
-		"tns-core-modules": "^4.1.0",
 		"vue": "^2.5.11",
 		"vue-router": "^3.0.1",
 		"vuex": "^3.0.1",
+		"electron-devtools-installer": "^2.2.4",
 		"winston": "^3.0.0"
 	},
 	"browserslist": [
@@ -73,14 +74,8 @@
 		"eslint-plugin-standard": "^3.0.1",
 		"file-loader": "^1.1.4",
 		"mocha": "^5.0.1",
-		"nativescript-vue-externals": "^0.2.0",
-		"nativescript-vue-loader": "^0.1.5",
-		"nativescript-vue-target": "^0.1.0",
-		"nativescript-vue-template-compiler": "^1.3.1",
-		"ns-vue-loader": "^0.1.2",
 		"request": "^2.87.0",
 		"request-promise": "^4.2.2",
-		"rimraf": "^2.6.2",
 		"vue-loader": "^13.0.5",
 		"vue-template-compiler": "^2.4.4",
 		"webpack": "^3.6.0",
