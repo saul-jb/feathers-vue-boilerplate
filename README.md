@@ -53,31 +53,38 @@ export default {
 };
 ```
 ### Running
-#### Web
-The client side can be run via:
+#### Development
+Here are the commands for running in development mode
 ``` bash
+# Run on the browser with hot reload
 npm run dev
+
+# Run on the desktop
+npm run build
+npm run desktop
+
+# Run on android with hot reload
+npm run android
+
+# Run on ios with hot reload
+npm run ios
 ```
-#### Desktop
+#### Building
 The client can be built into files ready for the desktop application to run via:
 ``` bash
 npm run build
 ```
-Then to test the application run:
-``` bash
-npm run electron
-```
 To build the app for production run:
 ``` bash
-electron:build:OS:IA32
+electron:build:OS
 ```
 Where OS can be:
 * linux (defualt)
 * windows
 * mac
-And IA32 can be `ia32` if it is a ia32 build.
-#### Mobile
-Todo.
+* android
+* ios
+And :ia32 can be appended for ia32 builds (Desktop only).
 #### Server
 The client can be built into files ready for the server with this command:
 ``` bash
