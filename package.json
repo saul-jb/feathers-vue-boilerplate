@@ -11,22 +11,26 @@
 		"build": "cross-env NODE_ENV=production webpack  --config config/webpack.config.js --progress --hide-modules",
 
 		"electron": "cross-env NODE_ENV=development electron electron.js",
-		"electron:build": "cross-env NODE_ENV=production electron-builder build -l -x64",
 
-		"electron:build:mac": "cross-env NODE_ENV=production electron-builder build -m -x64",
+		"electron:build": "cross-env NODE_ENV=production electron-builder build -l --x64",
+		"electron:build:ia32": "cross-env NODE_ENV=production electron-builder build -l --ia32",
+		"electron:build:linux": "cross-env NODE_ENV=production electron-builder build -l --x64",
+		"electron:build:linux:ia32": "cross-env NODE_ENV=production electron-builder build -l --ia32",
+
+		"electron:build:mac": "cross-env NODE_ENV=production electron-builder build -m --x64",
 		"electron:build:mac:ia32": "cross-env NODE_ENV=production electron-builder build -m --ia32",
 
-		"electron:build:windows": "cross-env NODE_ENV=production electron-builder build -w -x64",
+		"electron:build:windows": "cross-env NODE_ENV=production electron-builder build -w --x64",
 		"electron:build:windows:ia32": "cross-env NODE_ENV=production electron-builder build -w --ia32",
 
 		"server": "node server/"
 	},
 	"build": {
-  "appId": "your.id",
-  "mac": {
-    "category": "your.app.category.type"
-  }
-},
+		"appId": "your.id",
+		"mac": {
+			"category": "your.app.category.type"
+		}
+	},
 	"dependencies": {
 		"@feathersjs/client": "^3.5.3",
 		"@feathersjs/configuration": "^1.0.2",
