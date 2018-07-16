@@ -18,10 +18,12 @@
 		"build:windows": "cross-env NODE_ENV=production electron-builder build -w --x64",
 		"build:windows:ia32": "cross-env NODE_ENV=production electron-builder build -w --ia32",
 
-		"android": "npm run debug -- --env.android",
-		"ios": "npm run debug -- --env.ios",
-		"build:android": "npm run build -- --env.android",
-		"build:ios": "npm run build -- --env.ios",
+		"build:mobile": "webpack --env.tnsAction build",
+		"mobile": "webpack --watch --env.tnsAction debug",
+		"android": "npm run mobile -- --env.android",
+		"ios": "npm run mobile -- --env.ios",
+		"build:android": "npm run build:mobile -- --env.android",
+		"build:ios": "npm run build:mobile -- --env.ios",
 
 		"server": "node server/",
 
