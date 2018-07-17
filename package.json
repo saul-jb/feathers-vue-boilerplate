@@ -7,23 +7,18 @@
 	"private": true,
 	"main": "electron.js",
 	"scripts": {
-		"dev": "cross-env NODE_ENV=development webpack-dev-server  --config config/webpack.config.js --content-base public --open --hot",
-		"build": "cross-env NODE_ENV=production webpack  --config config/webpack.config.js --progress --hide-modules",
-
-		"electron": "cross-env NODE_ENV=development electron electron.js",
-
-		"electron:build": "cross-env NODE_ENV=production electron-builder build -l --x64",
-		"electron:build:ia32": "cross-env NODE_ENV=production electron-builder build -l --ia32",
-		"electron:build:linux": "cross-env NODE_ENV=production electron-builder build -l --x64",
-		"electron:build:linux:ia32": "cross-env NODE_ENV=production electron-builder build -l --ia32",
-
-		"electron:build:mac": "cross-env NODE_ENV=production electron-builder build -m --x64",
-		"electron:build:mac:ia32": "cross-env NODE_ENV=production electron-builder build -m --ia32",
-
-		"electron:build:windows": "cross-env NODE_ENV=production electron-builder build -w --x64",
-		"electron:build:windows:ia32": "cross-env NODE_ENV=production electron-builder build -w --ia32",
-
-		"server": "node server/"
+		"dev": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.config.js --content-base public --open --hot",
+		"build": "cross-env NODE_ENV=production webpack --config config/webpack.config.js --progress --hide-modules",
+		"desktop": "cross-env NODE_ENV=development electron config/electron.js",
+		"build:desktop": "cross-env NODE_ENV=production electron-builder build",
+		"build:linux": "npm run build:desktop -- --linux --x64",
+		"build:linux:ia32": "npm run build:desktop -- --linux --ia32",
+		"build:mac": "npm run build:desktop -- --mac --x64",
+		"build:mac:ia32": "npm run build:desktop -- --mac --ia32",
+		"build:windows": "npm run build:desktop -- --win --x64",
+		"build:windows:ia32": "npm run build:desktop -- --win --ia32",
+		"server": "node server/",
+		"clean": "rimraf dist"
 	},
 	"build": {
 		"appId": "your.id",
@@ -74,6 +69,7 @@
 		"mocha": "^5.0.1",
 		"request": "^2.87.0",
 		"request-promise": "^4.2.2",
+		"rimraf": "^2.6.2",
 		"vue-loader": "^13.0.5",
 		"vue-template-compiler": "^2.4.4",
 		"webpack": "^3.6.0",
